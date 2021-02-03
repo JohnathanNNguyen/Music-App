@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { SpotifyApiService } from 'src/app/spotify-api.service';
 
 @Component({
@@ -7,15 +8,15 @@ import { SpotifyApiService } from 'src/app/spotify-api.service';
   styleUrls: ['./browse-category.component.scss']
 })
 export class BrowseCategoryComponent implements OnInit {
+  id;
   playlistObj;
   playlist = []
   playlistTracks;
 
-  constructor(private spotifyApiService: SpotifyApiService) {
-    // this.playlistObj = this.spotifyApiService.currentPlaylist.items
-  }
+  constructor(private spotifyApiService: SpotifyApiService,) { }
 
   ngOnInit(): void {
+
     this.spotifyApiService.updatedPlaylist
       .subscribe(() => {
         this.playlistObj = this.spotifyApiService.currentPlaylist
@@ -27,9 +28,10 @@ export class BrowseCategoryComponent implements OnInit {
     this.spotifyApiService.getApiData(id)
       .subscribe((data) => {
         this.playlistTracks = data
-        this.spotifyApiService.currentTracks = this.playlistTracks
+        this.spotifyApiService.currentTracks = this.playlistTracks.tracks.items
         this.spotifyApiService.updatePlaylist()
         console.log(this.playlistTracks)
       })
+
   }
 }

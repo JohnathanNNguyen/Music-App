@@ -7,19 +7,20 @@ import { SpotifyApiService } from './spotify-api.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  dataLoaded: boolean = false;
   events: string[] = [];
   opened: boolean = true;
   tokenData;
 
 
   constructor(private spotifyApi: SpotifyApiService) {
+  }
+  ngOnInit() {
     // spotify requires a new token every hour to access their API so below we call the function evey hour
     this.getToken()
     setInterval(() => {
       this.getToken()
     }, 60 * 60 * 1000)
-  }
-  ngOnInit() {
 
   }
 
@@ -29,6 +30,7 @@ export class AppComponent implements OnInit {
         this.tokenData = data
         this.spotifyApi.token = this.tokenData.access_token
         console.log(this.spotifyApi.token, 'REMOVE ME WHEN YOU PUBLISH!!!!!!')
+        this.dataLoaded = true
       })
   }
 

@@ -15,14 +15,14 @@ export class CategoriesComponent implements OnInit, OnDestroy {
   constructor(private spotifyApi: SpotifyApiService) { }
 
   ngOnInit(): void {
-    setTimeout(() => {
-      this.spotifyApi.getCategories()
-        .subscribe((data) => {
-          this.categoryApiData = data
-          this.categoryItems = this.categoryApiData.categories.items
-          console.log(this.categoryItems)
-        })
-    }, 100)
+
+    this.spotifyApi.getCategories()
+      .subscribe((data) => {
+        this.categoryApiData = data
+        this.categoryItems = this.categoryApiData.categories.items
+        console.log(this.categoryItems)
+      })
+
   }
   onPickedCategory(category: string) {
     this.spotifyApi.browseCategory(category)
@@ -30,7 +30,7 @@ export class CategoriesComponent implements OnInit, OnDestroy {
         this.categoryList = data
         this.spotifyApi.currentPlaylist = data
         this.spotifyApi.updatePlaylist()
-        console.log(this.spotifyApi.currentPlaylist)
+        // console.log(this.spotifyApi.currentPlaylist)
       })
   }
 

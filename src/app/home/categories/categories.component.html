@@ -6,7 +6,7 @@
     >
       <div class="img-container">
         <a
-          [routerLink]="['/browse/' + items.id]"
+          [routerLink]="['/categories/browse/' + items.id]"
           (click)="onPickedCategory(items.id)"
         >
           <img src="{{ items.icons[0].url }}" alt="" />

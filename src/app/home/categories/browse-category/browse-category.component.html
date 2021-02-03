@@ -5,7 +5,7 @@
       *ngFor="let list of playlist; index as i"
     >
       <div class="img-container">
-        <a (click)="onPlaylist(list.href)">
+        <a (click)="onPlaylist(list.href)" routerLink="/tracks">
           <img src="{{ list.images[0].url }}" alt="Photo of {{ list.name }}" />
           <p class="hover-info">{{ list.description }}</p>
         </a>

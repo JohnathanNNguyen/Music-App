@@ -1,19 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ArtistComponent } from './home/artist/artist.component';
-import { SongsComponent } from './home/songs/songs.component';
 import { SearchComponent } from './search/search.component';
 import { HomeComponent } from './home/home.component';
 import { WebPlaybackComponent } from './web-playback/web-playback.component';
-
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { CategoriesComponent } from './home/categories/categories.component';
+import { BrowseCategoryComponent } from './home/categories/browse-category/browse-category.component';
+import { TrackComponent } from './home/track/track.component';
 
 //angular material
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -23,9 +24,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
-import { CategoriesComponent } from './home/categories/categories.component';
-import { BrowseCategoryComponent } from './home/categories/browse-category/browse-category.component';
-import { TrackComponent } from './home/categories/track/track.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +33,6 @@ import { TrackComponent } from './home/categories/track/track.component';
     HomeComponent,
     WebPlaybackComponent,
     ArtistComponent,
-    SongsComponent,
     SearchComponent,
     CategoriesComponent,
     BrowseCategoryComponent,
@@ -55,7 +52,7 @@ import { TrackComponent } from './home/categories/track/track.component';
     MatTabsModule,
     MatTabsModule,
     MatSelectModule,
-    MatRadioModule
+    MatRadioModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

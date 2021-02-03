@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { routerTransition } from '../router.animations';
-import { SpotifyApiService } from '../spotify-api.service';
+// import { SpotifyApiService } from '../spotify-api.service';
 
 @Component({
   selector: 'app-home',
@@ -13,13 +13,13 @@ export class HomeComponent implements OnInit {
   activeLink = this.links[0];
 
 
-  getState(outlet) {
-    return outlet.activatedRouteData.state;
-  }
   constructor() {
   }
 
   ngOnInit() {
+  }
+  getState(outlet) {
+    return outlet.activatedRouteData.state;
   }
 
 }
