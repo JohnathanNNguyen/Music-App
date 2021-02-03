@@ -9,6 +9,7 @@ import { Subject } from 'rxjs';
 export class SpotifyApiService implements OnInit {
   updatedPlaylist = new Subject<any>();
   updatedTracks = new Subject<{}>()
+  playbackId: string;
   currentTracks: {}
   token: string;
   searchType: string;
@@ -49,7 +50,7 @@ export class SpotifyApiService implements OnInit {
   }
   getCategories() {
     return this.http.get(
-      "https://api.spotify.com/v1/browse/categories?country=US",
+      "https://api.spotify.com/v1/browse/categories?country=us",
       {
         headers: {
           Accept: 'application.json',
@@ -61,7 +62,7 @@ export class SpotifyApiService implements OnInit {
   }
   browseCategory(category: string) {
     return this.http.get(
-      'https://api.spotify.com/v1/browse/categories/' + category + '/playlists',
+      'https://api.spotify.com/v1/browse/categories/' + category + '/playlists?country=us',
       {
         headers: {
           Accept: 'application.json',

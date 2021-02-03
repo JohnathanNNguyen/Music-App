@@ -18,21 +18,15 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
   ]
 })
 export class TrackComponent implements OnInit {
-  currentTracks;
-  columnsToDisplay = ['Id', 'Track', 'Artist', 'Album'];
-
-  // expandedElement: TrackData | null;
+  playbackId: string;
+  playbackUrl: string
   constructor(private spotifyApi: SpotifyApiService) { }
 
   ngOnInit(): void {
     this.spotifyApi.updatedPlaylist
       .subscribe(() => {
-        this.currentTracks = this.spotifyApi.currentTracks
+        this.playbackId = this.spotifyApi.playbackId
       })
-  }
-
-  onTestApi() {
-    console.log(this.currentTracks)
   }
 
 }

@@ -24,6 +24,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
+import { SafePipe } from './home/track/safe.pipe';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { MatRadioModule } from '@angular/material/radio';
     CategoriesComponent,
     BrowseCategoryComponent,
     TrackComponent,
+    SafePipe,
   ],
   imports: [
     BrowserModule,

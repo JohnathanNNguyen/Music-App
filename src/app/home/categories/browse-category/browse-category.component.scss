@@ -1,6 +1,10 @@
 img {
   width: 100%;
 }
+.row {
+  display: flex;
+  justify-content: center;
+}
 .img-container {
   position: relative;
   margin-bottom: 20px;
