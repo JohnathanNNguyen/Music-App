@@ -3,14 +3,59 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { ArtistComponent } from './home/artist/artist.component';
+import { SongsComponent } from './home/songs/songs.component';
+import { SearchComponent } from './search/search.component';
+import { HomeComponent } from './home/home.component';
+import { WebPlaybackComponent } from './web-playback/web-playback.component';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+
+//angular material
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
+import { CategoriesComponent } from './home/categories/categories.component';
+import { BrowseCategoryComponent } from './home/categories/browse-category/browse-category.component';
+import { TrackComponent } from './home/categories/track/track.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    HomeComponent,
+    WebPlaybackComponent,
+    ArtistComponent,
+    SongsComponent,
+    SearchComponent,
+    CategoriesComponent,
+    BrowseCategoryComponent,
+    TrackComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+
+    MatSidenavModule,
+    MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatTabsModule,
+    MatTabsModule,
+    MatSelectModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

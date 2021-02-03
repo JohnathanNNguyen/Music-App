@@ -1,0 +1,45 @@
+//color pallet
+
+//mixins
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin border-radius($r) {
+  border-radius: $r;
+  -webkit-border-radius: $r;
+  -moz-border-radius: $r;
+  -ms-border-radius: $r;
+  -o-border-radius: $r;
+}
+
+// hover info
+// .img-container {
+//   position: relative;
+//   margin-bottom: 20px;
+// }
+// .hover-info {
+//   align-items: center;
+//   background: #969696de;
+//   bottom: 0;
+//   color: #fff;
+//   display: flex;
+//   justify-content: center;
+//   margin-bottom: 0;
+//   left: 0;
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   opacity: 0;
+//   visibility: hidden;
+//   width: 275px;
+
+//   /* transition effect. not necessary */
+//   transition: opacity 0.2s, visibility 0.2s;
+// }
+// .img-container:hover .hover-info {
+//   visibility: visible;
+//   opacity: 1;
+// }

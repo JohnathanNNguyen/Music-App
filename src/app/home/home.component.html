@@ -1,0 +1,16 @@
+<div class="container">
+  <nav mat-tab-nav-bar>
+    <a
+      mat-tab-link
+      *ngFor="let link of links"
+      (click)="activeLink = link"
+      [active]="activeLink == link"
+      [routerLink]="[link | lowercase]"
+    >
+      {{ link }}
+    </a>
+  </nav>
+</div>
+<main [@routerTransition]="getState(o)">
+  <router-outlet #o="outlet"></router-outlet>
+</main>

@@ -1,0 +1,15 @@
+@import "../../const.scss";
+mat-tab-group {
+  @include center;
+  margin-top: 100px;
+}
+
+.container {
+  @include center;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.mat-tab-link {
+  color: #ffffff;
+}

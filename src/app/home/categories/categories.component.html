@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div
+      class="col-md-6 col-lg-4 col-sm-12 col-xl-3"
+      *ngFor="let items of categoryItems"
+    >
+      <div class="img-container">
+        <a
+          [routerLink]="['/browse/' + items.id]"
+          (click)="onPickedCategory(items.id)"
+        >
+          <img src="{{ items.icons[0].url }}" alt="" />
+          <p class="hover-info">{{ items.id }}</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+@import "../../const.scss";
+mat-tab-group {
+  @include center;
+  margin-top: 100px;
+}
+
+.content-container {
+  // width: 100%;
+  min-height: 100vh;
+}

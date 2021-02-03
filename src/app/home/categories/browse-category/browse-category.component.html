@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div
+      class="col-md-6 col-sm-12 col-lg-4 col-xl-3"
+      *ngFor="let list of playlist; index as i"
+    >
+      <div class="img-container">
+        <a (click)="onPlaylist(list.href)">
+          <img src="{{ list.images[0].url }}" alt="Photo of {{ list.name }}" />
+          <p class="hover-info">{{ list.description }}</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

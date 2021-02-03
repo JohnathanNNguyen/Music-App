@@ -1,0 +1,26 @@
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <mat-tab-group dynamicHeight>
+        <mat-tab class="content-container" label="Artist">
+          <app-artist></app-artist>
+        </mat-tab>
+        <mat-tab label="Songs"> <app-songs></app-songs></mat-tab>
+        <mat-tab label="Categories" routerLink="categories">
+          <router-outlet></router-outlet
+        ></mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+</div> -->
+<nav mat-tab-nav-bar>
+  <a
+    mat-tab-link
+    *ngFor="let link of links"
+    routerLink="{{ link | lowercase }}"
+    (click)="activeLink = link"
+    [active]="activeLink == link"
+  >
+    {{ link }}</a
+  >
+</nav>

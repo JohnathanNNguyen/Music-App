@@ -1,0 +1,32 @@
+img {
+  width: 100%;
+}
+.img-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+.hover-info {
+  align-items: center;
+  background: #1d1d1db7;
+  bottom: 0;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+  left: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  padding: 20px;
+
+  /* transition effect. not necessary */
+  transition: opacity 0.2s, visibility 0.2s;
+}
+.img-container:hover .hover-info {
+  visibility: visible;
+  opacity: 1;
+  cursor: pointer;
+}
