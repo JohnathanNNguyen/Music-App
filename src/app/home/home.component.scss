@@ -13,3 +13,7 @@ mat-tab-group {
 .mat-tab-link {
   color: #ffffff;
 }
+.active-link {
+  border-bottom: 1px solid rgb(44, 182, 224);
+  color: #ffffff;
+}

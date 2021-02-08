@@ -1,24 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import { Artist } from '../Models/artist.model';
 import { SpotifyApiService } from '../spotify-api.service';
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.scss']
+  styleUrls: ['./search.component.scss'],
 })
 export class SearchComponent {
   input: string;
   type: string;
+  searchInput: string;
   searchData;
-  constructor(private spotifyApiService: SpotifyApiService) {
-  }
+  constructor(private spotifyApiService: SpotifyApiService) {}
 
-  onSearch(input: string) {
-    this.spotifyApiService.searchInput(input)
-      .subscribe((data) => {
-        this.searchData = data
-        console.log(data)
-      })
+  onSearch(input: string, type: string) {
+    this.spotifyApiService.searchArtist(input, type).subscribe((data) => {
+      this.searchData = data;
+      console.log(data);
+    });
   }
 }

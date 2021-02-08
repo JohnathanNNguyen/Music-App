@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +15,8 @@ import { WebPlaybackComponent } from './web-playback/web-playback.component';
 import { CategoriesComponent } from './home/categories/categories.component';
 import { BrowseCategoryComponent } from './home/categories/browse-category/browse-category.component';
 import { TrackComponent } from './home/track/track.component';
+import { SafePipe } from './home/track/safe.pipe';
+import { XLengthPipe } from './xLength.pipe';
 
 //angular material
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -24,7 +26,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
-import { SafePipe } from './home/track/safe.pipe';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { SafePipe } from './home/track/safe.pipe';
     BrowseCategoryComponent,
     TrackComponent,
     SafePipe,
+    XLengthPipe,
   ],
   imports: [
     BrowserModule,
@@ -46,6 +48,7 @@ import { SafePipe } from './home/track/safe.pipe';
     BrowserAnimationsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    FormsModule,
 
     MatSidenavModule,
     MatButtonModule,
@@ -57,6 +60,6 @@ import { SafePipe } from './home/track/safe.pipe';
     MatRadioModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

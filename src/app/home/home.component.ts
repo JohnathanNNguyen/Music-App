@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterContentInit, Component, OnInit } from '@angular/core';
 import { routerTransition } from '../router.animations';
 // import { SpotifyApiService } from '../spotify-api.service';
 
@@ -6,20 +6,17 @@ import { routerTransition } from '../router.animations';
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  animations: [routerTransition]
+  animations: [routerTransition],
 })
-export class HomeComponent implements OnInit {
-  links = ['Categories', 'Artist', 'Tracks']
-  activeLink = this.links[0];
+export class HomeComponent implements OnInit, AfterContentInit {
+  dataLoaded: boolean = false;
+  constructor() {}
 
-
-  constructor() {
-  }
-
-  ngOnInit() {
+  ngOnInit() {}
+  ngAfterContentInit() {
+    this.dataLoaded = true;
   }
   getState(outlet) {
     return outlet.activatedRouteData.state;
   }
-
 }

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  links = ['Categories', 'Artist', 'Tracks']
+  links = [   'Categories', 'Artist', 'Tracks']
   activeLink = this.links[0];
   constructor() { }
 

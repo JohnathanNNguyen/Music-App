@@ -1,9 +1,10 @@
-<!-- <button (click)="onTestApi()">Test API</button> -->
-<div class="player-container">
+<div class="player-container" *ngIf="playbackId">
   <iframe
+    data-aos="fade-in"
+    data-aos-duration="3000"
     [src]="'https://open.spotify.com/embed/' + playbackId | safe"
     width="1000"
-    height="600"
+    height="800"
     frameborder="0"
     allowtransparency="true"
     allow="encrypted-media"

@@ -1,16 +1,22 @@
+@import "../../../const.scss";
 .container {
   display: flex;
   justify-content: center;
   padding-top: 40px;
 }
-
+.row {
+  @include center;
+}
+img {
+  width: 100%;
+}
 .img-container {
   position: relative;
   margin-bottom: 20px;
 }
 .hover-info {
   align-items: center;
-  background: #1d1d1db7;
+  background: #616161b7;
   bottom: 0;
   color: #fff;
   display: flex;
@@ -22,7 +28,7 @@
   right: 0;
   opacity: 0;
   visibility: hidden;
-  width: 275px;
+  width: 100%;
 
   /* transition effect. not necessary */
   transition: opacity 0.2s, visibility 0.2s;

@@ -1,7 +1,54 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-12 col-lg-12 col-sm-12 input-container">
-      <app-search class="search-input" type="artist"></app-search>
+<div class="search-container">
+  <mat-form-field class="full-width">
+    <mat-label>Search</mat-label>
+    <div class="input-field">
+      <input
+        matInput
+        #inputField
+        placeholder="Artist"
+        type="text"
+        [(ngModel)]="searchInput"
+      />
     </div>
+  </mat-form-field>
+  <button
+    [disabled]="!searchInput"
+    mat-button
+    color="success"
+    (click)="onSearch(searchInput, 'artist')"
+  >
+    <img src="../../assets/play-button(1).svg" alt="" />
+  </button>
+</div>
+<div class="container" *ngIf="artistSearched">
+  <div class="row">
+    <ng-template ngFor let-items [ngForOf]="artistData">
+      <div
+        class="col-lg-4 col-xl-3 col-md-6 col-sm-12"
+        *ngIf="items.images.length >= 1"
+      >
+        <div class="img-container">
+          <a (click)="onSelectArtist(items.href)" routerLink="/tracks">
+            <div class="image">
+              <img
+                data-aos="fade-in"
+                data-aos-duration="3000"
+                class="img img-responsive full-width"
+                src="{{ items.images[0].url }}"
+                alt=""
+              />
+            </div>
+            <div class="hover-info">
+              <h4>{{ items.name }}</h4>
+              <br />
+              <p>
+                Genres:
+                {{ items.genres }}
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </ng-template>
   </div>
 </div>

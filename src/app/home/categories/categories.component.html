@@ -9,7 +9,12 @@
           [routerLink]="['/categories/browse/' + items.id]"
           (click)="onPickedCategory(items.id)"
         >
-          <img src="{{ items.icons[0].url }}" alt="" />
+          <img
+            data-aos="fade-in"
+            data-aos-duration="3000"
+            src="{{ items.icons[0].url }}"
+            alt=""
+          />
           <p class="hover-info">{{ items.id }}</p>
         </a>
       </div>
