@@ -36,7 +36,6 @@ export class ArtistComponent implements OnInit {
       this.spotifyApiService.artistData = this.searchData.artists.items;
       this.artistData = this.spotifyApiService.artistData;
       this.artistSearched = true;
-      console.log(this.artistData);
     });
 
     this.searchInput = null;
@@ -48,8 +47,6 @@ export class ArtistComponent implements OnInit {
       console.log(this.artistTracks);
       this.spotifyApiService.playbackId = 'artist/' + this.artistTracks.id;
       this.spotifyApiService.updatePlaylist();
-      // this.spotifyApiService.updatePlaylist();
-      console.log(this.spotifyApiService.playbackId);
     });
   }
 }

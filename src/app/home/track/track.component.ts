@@ -25,11 +25,13 @@ import {
 })
 export class TrackComponent implements OnInit {
   trackSearched: boolean = false;
+  mobile: boolean = false;
   playbackId: string;
   playbackUrl: string;
   searchInput: string;
   searchData;
   searchDataArray: [] = [];
+
   spotifyUrl: string = 'https://open.spotify.com/embed/track/';
   constructor(private spotifyApi: SpotifyApiService) {}
 
@@ -37,6 +39,9 @@ export class TrackComponent implements OnInit {
     this.spotifyApi.updatedPlaylist.subscribe(() => {
       this.playbackId = this.spotifyApi.playbackId;
     });
+    if (window.screen.width < 768) {
+      this.mobile = true;
+    }
   }
 
   onSearch(input: string, type: string) {
@@ -46,7 +51,6 @@ export class TrackComponent implements OnInit {
       this.searchDataArray = this.searchData.tracks.items;
       this.playbackId = '';
       this.trackSearched = true;
-      console.log(this.searchDataArray);
     });
 
     this.searchInput = null;

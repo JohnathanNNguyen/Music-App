@@ -4,6 +4,8 @@
   display: flex;
   justify-content: center;
   margin-top: 100px;
+  margin-bottom: 70px;
+  padding: 20px;
 }
 .full-width {
   width: 400px;
@@ -37,5 +39,9 @@ button:disabled {
 
 .player-container {
   @include center;
-  margin-top: 150px;
+  margin-top: 70px;
+}
+.row {
+  display: flex;
+  justify-content: center;
 }

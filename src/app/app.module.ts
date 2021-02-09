@@ -9,9 +9,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ArtistComponent } from './home/artist/artist.component';
-import { SearchComponent } from './search/search.component';
 import { HomeComponent } from './home/home.component';
-import { WebPlaybackComponent } from './web-playback/web-playback.component';
 import { CategoriesComponent } from './home/categories/categories.component';
 import { BrowseCategoryComponent } from './home/categories/browse-category/browse-category.component';
 import { TrackComponent } from './home/track/track.component';
@@ -33,9 +31,7 @@ import { MatRadioModule } from '@angular/material/radio';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    WebPlaybackComponent,
     ArtistComponent,
-    SearchComponent,
     CategoriesComponent,
     BrowseCategoryComponent,
     TrackComponent,

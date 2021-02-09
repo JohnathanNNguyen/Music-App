@@ -21,16 +21,32 @@
   </button>
 </div>
 <div class="container" *ngIf="trackSearched">
-  <div *ngFor="let items of searchDataArray">
-    <p>{{items.id}}</p>
-    <iframe
-      [src]="'https://open.spotify.com/embed/track/2r6OAV3WsYtXuXjvJ1lIDi' | safe"
-      width="250"
-      height="330"
-      frameborder="0"
-      allowtransparency="true"
-      allow="encrypted-media"
-      ></iframe>
+  <div class="row">
+    <div *ngFor="let items of searchDataArray">
+      <div *ngIf="!mobile">
+        <div class="col-sm-6 col-lg-4 col-xl-3 col-xs-12">
+            <iframe
+              [src]="'https://open.spotify.com/embed/track/'+[items.id] | safe"
+              width="250"
+              height="330"
+              frameborder="0"
+              allowtransparency="true"
+              allow="encrypted-media"
+              ></iframe>
+          </div>
+      </div>
+    <div *ngIf="mobile">
+        <iframe
+          [src]="'https://open.spotify.com/embed/track/'+[items.id] | safe"
+          width="350"
+          height="80"
+          frameborder="0"
+          allowtransparency="true"
+          allow="encrypted-media"
+          ></iframe>
+      </div>
+    </div>
+
   </div>
 
 </div>

@@ -17,7 +17,6 @@ export class CategoriesComponent implements OnInit, OnDestroy {
     this.spotifyApi.getCategories().subscribe((data) => {
       this.categoryApiData = data;
       this.categoryItems = this.categoryApiData.categories.items;
-      console.log(data);
     });
   }
   onPickedCategory(category: string) {
@@ -25,7 +24,6 @@ export class CategoriesComponent implements OnInit, OnDestroy {
       this.categoryList = data;
       this.spotifyApi.currentPlaylist = data;
       this.spotifyApi.updatePlaylist();
-      console.log(this.spotifyApi.currentPlaylist);
     });
   }
 
