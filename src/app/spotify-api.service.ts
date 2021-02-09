@@ -10,6 +10,7 @@ export class SpotifyApiService {
   updatedPlaylist = new Subject<any>();
   updatedTracks = new Subject<{}>();
   artistData: [] = [];
+  tracksData: [] = [];
   playbackId: string;
   currentTracks: {};
   token: string;

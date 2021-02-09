@@ -1,4 +1,5 @@
 import { AfterContentInit, Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { routerTransition } from '../router.animations';
 // import { SpotifyApiService } from '../spotify-api.service';
 
@@ -10,7 +11,7 @@ import { routerTransition } from '../router.animations';
 })
 export class HomeComponent implements OnInit, AfterContentInit {
   dataLoaded: boolean = false;
-  constructor() {}
+  constructor(public router: Router) {}
 
   ngOnInit() {}
   ngAfterContentInit() {
