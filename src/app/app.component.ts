@@ -27,7 +27,6 @@ export class AppComponent implements OnInit {
     this.spotifyApi.getApiToken().subscribe((data) => {
       this.tokenData = data;
       this.spotifyApi.token = this.tokenData.access_token;
-      console.log(this.spotifyApi.token, 'REMOVE ME WHEN YOU PUBLISH!!!!!!');
       this.dataLoaded = true;
     });
   }
