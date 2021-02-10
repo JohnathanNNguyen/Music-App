@@ -7,16 +7,20 @@ mat-tab-group {
 .container {
   @include center;
   margin-top: 100px;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 
 .mat-tab-link {
   color: #ffffff;
 }
 .active-link {
-  border-bottom: 1px solid $neon-green;
+  border-bottom: 2px solid $neon-green;
   color: #ffffff;
+  font-size: 18px;
 }
 img {
   width: 100%;
+}
+a {
+  font-size: 16px;
 }
