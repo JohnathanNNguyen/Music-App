@@ -1,12 +1,15 @@
 @import "../../const.scss";
+body {
+  min-height: 95vh;
+}
 mat-tab-group {
   @include center;
-  margin-top: 100px;
+  padding-top: 100px;
 }
 
 .container {
   @include center;
-  margin-top: 100px;
+  padding-top: 100px;
   margin-bottom: 60px;
 }
 
@@ -23,4 +26,8 @@ img {
 }
 a {
   font-size: 16px;
+}
+.footer {
+  display: flex;
+  justify-content: center;
 }

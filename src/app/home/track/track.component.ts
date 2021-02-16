@@ -33,6 +33,7 @@ export class TrackComponent implements OnInit {
   searchDataArray: [] = [];
 
   spotifyUrl: string = 'https://open.spotify.com/embed/track/';
+
   constructor(private spotifyApi: SpotifyApiService) {}
 
   ngOnInit(): void {

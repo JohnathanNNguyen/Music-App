@@ -1,17 +1,18 @@
-<div class="container">
-  <nav mat-tab-nav-bar>
-    <a mat-tab-link routerLink="categories" routerLinkActive="active-link"
-      >Categories</a
-    >
-    <a mat-tab-link routerLink="artist" routerLinkActive="active-link"
-      >Artist</a
-    >
-    <a mat-tab-link routerLink="tracks" routerLinkActive="active-link"
-      >Tracks</a
-    >
-  </nav>
-</div>
-
-<main [@routerTransition]="getState(o)" *ngIf="dataLoaded">
-  <router-outlet #o="outlet"></router-outlet>
-</main>
+<body>
+  <div class="container">
+    <nav mat-tab-nav-bar>
+      <a mat-tab-link routerLink="categories" routerLinkActive="active-link"
+        >Categories</a
+      >
+      <a mat-tab-link routerLink="artist" routerLinkActive="active-link"
+        >Artist</a
+      >
+      <a mat-tab-link routerLink="tracks" routerLinkActive="active-link"
+        >Tracks</a
+      >
+    </nav>
+  </div>
+  <main [@routerTransition]="getState(o)" *ngIf="dataLoaded">
+    <router-outlet #o="outlet"></router-outlet>
+  </main>
+</body>

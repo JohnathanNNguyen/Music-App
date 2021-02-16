@@ -3,7 +3,7 @@
   white-space: nowrap;
   display: flex;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 70px;
   margin-bottom: 70px;
   padding: 20px;
 }
@@ -40,9 +40,12 @@ button:disabled {
 .player-container {
   @include center;
   margin-top: 70px;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 .row {
   display: flex;
   justify-content: center;
+}
+.container {
+  padding-bottom: 80px;
 }

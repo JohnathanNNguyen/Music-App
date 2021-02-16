@@ -17,7 +17,6 @@ import { SafePipe } from './home/track/safe.pipe';
 import { XLengthPipe } from './xLength.pipe';
 
 //angular material
-import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -46,11 +45,10 @@ import { MatRadioModule } from '@angular/material/radio';
     ReactiveFormsModule,
     FormsModule,
 
-    MatSidenavModule,
+    //angular material
     MatButtonModule,
     MatInputModule,
     MatFormFieldModule,
-    MatTabsModule,
     MatTabsModule,
     MatSelectModule,
     MatRadioModule,

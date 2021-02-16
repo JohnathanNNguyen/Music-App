@@ -55,7 +55,7 @@ export class SpotifyApiService {
   }
   getCategories() {
     return this.http.get(
-      'https://api.spotify.com/v1/browse/categories?country=us',
+      'https://api.spotify.com/v1/browse/categories?country=us&limit=32',
       {
         headers: {
           Accept: 'application.json',

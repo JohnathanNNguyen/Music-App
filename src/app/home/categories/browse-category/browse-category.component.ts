@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params, Router } from '@angular/router';
 import { SpotifyApiService } from 'src/app/spotify-api.service';
 
 @Component({
@@ -28,7 +27,7 @@ export class BrowseCategoryComponent implements OnInit {
       this.spotifyApiService.currentTracks = this.playlistTracks.tracks.items;
       this.spotifyApiService.playbackId = 'playlist/' + this.playlistTracks.id;
       this.spotifyApiService.updatePlaylist();
-      console.log(this.spotifyApiService.playbackId);
+      // console.log(this.spotifyApiService.playbackId);
     });
   }
 }
