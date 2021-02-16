@@ -1,7 +1,6 @@
 import { AfterContentInit, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { routerTransition } from '../router.animations';
-// import { SpotifyApiService } from '../spotify-api.service';
 
 @Component({
   selector: 'app-home',

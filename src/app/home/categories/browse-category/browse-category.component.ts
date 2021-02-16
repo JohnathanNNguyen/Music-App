@@ -27,7 +27,6 @@ export class BrowseCategoryComponent implements OnInit {
       this.spotifyApiService.currentTracks = this.playlistTracks.tracks.items;
       this.spotifyApiService.playbackId = 'playlist/' + this.playlistTracks.id;
       this.spotifyApiService.updatePlaylist();
-      // console.log(this.spotifyApiService.playbackId);
     });
   }
 }
